@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 196" fill="none" role="img" aria-labelledby="make-it-real-title make-it-real-desc">
+  <title id="make-it-real-title">MAKE IT REAL</title>
+  <desc id="make-it-real-desc">An original clipped-corner blue label with custom cream vector lettering and contrasting corner accents.</desc>
+  <path d="M28 8h302l22 23v133l-25 24H28L8 165V31Z" fill="#0038ff" stroke="#101010" stroke-width="8" stroke-linejoin="round"/>
+<path d="m22 24 17-5 5 16-17 5Z" fill="#ff77cd"/>
+<path d="m321 156 15 4-5 16-15-4Z" fill="#ff5f04"/>
+<path d="M0 36V0L14 21 28 0V36" transform="translate(71.36 37) scale(1.04)" fill="none" stroke="#fff9ed" stroke-width="7.2" stroke-linecap="square" stroke-linejoin="round"/>
+<path d="M0 36 12 0 24 36M5 23H19" transform="translate(110.88 37) scale(1.04)" fill="none" stroke="#fff9ed" stroke-width="7.2" stroke-linecap="square" stroke-linejoin="round"/>
+<path d="M0 0V36M24 0 2 20 24 36" transform="translate(146.24 37) scale(1.04)" fill="none" stroke="#fff9ed" stroke-width="7.2" stroke-linecap="square" stroke-linejoin="round"/>
+<path d="M22 0H0V36H22M0 18H19" transform="translate(181.6 37) scale(1.04)" fill="none" stroke="#fff9ed" stroke-width="7.2" stroke-linecap="square" stroke-linejoin="round"/>
+<path d="M0 0H16M8 0V36M0 36H16" transform="translate(232.56 37) scale(1.04)" fill="none" stroke="#fff9ed" stroke-width="7.2" stroke-linecap="square" stroke-linejoin="round"/>
+<path d="M0 0H26M13 0V36" transform="translate(259.6 37) scale(1.04)" fill="none" stroke="#fff9ed" stroke-width="7.2" stroke-linecap="square" stroke-linejoin="round"/>
+<path d="M0 36V0H13Q24 0 24 10T13 20H0M13 20 25 36" transform="translate(88.825 104) scale(1.45)" fill="none" stroke="#fff9ed" stroke-width="7.2" stroke-linecap="square" stroke-linejoin="round"/>
+<path d="M22 0H0V36H22M0 18H19" transform="translate(139.575 104) scale(1.45)" fill="none" stroke="#fff9ed" stroke-width="7.2" stroke-linecap="square" stroke-linejoin="round"/>
+<path d="M0 36 12 0 24 36M5 23H19" transform="translate(185.975 104) scale(1.45)" fill="none" stroke="#fff9ed" stroke-width="7.2" stroke-linecap="square" stroke-linejoin="round"/>
+<path d="M0 0V36H22" transform="translate(235.275 104) scale(1.45)" fill="none" stroke="#fff9ed" stroke-width="7.2" stroke-linecap="square" stroke-linejoin="round"/>
+<path d="m43 112 5 13 14 5-14 5-5 13-5-13-14-5 14-5Z" fill="#ffe78c"/>
+<path d="m312 112 5 13 14 5-14 5-5 13-5-13-14-5 14-5Z" fill="#ff77cd"/>
+</svg>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="none" role="img" aria-labelledby="sk-seal-title sk-seal-desc">
+  <title id="sk-seal-title">SK — personal seal</title>
+  <desc id="sk-seal-desc">An original blue sixteen-point seal with cream centre and geometric SK lettering.</desc>
+  <polygon points="128,10 149.07,22.08 173.16,18.98 188,38.2 211.44,44.56 217.8,68 237.02,82.84 233.92,106.93 246,128 233.92,149.07 237.02,173.16 217.8,188 211.44,211.44 188,217.8 173.16,237.02 149.07,233.92 128,246 106.93,233.92 82.84,237.02 68,217.8 44.56,211.44 38.2,188 18.98,173.16 22.08,149.07 10,128 22.08,106.93 18.98,82.84 38.2,68 44.56,44.56 68,38.2 82.84,18.98 106.93,22.08" fill="#0038ff" stroke="#101010" stroke-width="7" stroke-linejoin="round"/>
+<circle cx="128" cy="128" r="89" fill="#fff9ed" stroke="#101010" stroke-width="6"/>
+<path d="m128 49 6 14 14 6-14 6-6 14-6-14-14-6 14-6Z" fill="#ff5f04" stroke="#101010" stroke-width="4" stroke-linejoin="round"/>
+<path d="M24 4Q20 0 12 0 0 0 0 9T12 18Q24 18 24 27T12 36Q4 36 0 32" transform="translate(68.84 91) scale(2.04)" fill="none" stroke="#0038ff" stroke-width="8.5" stroke-linecap="square" stroke-linejoin="round"/>
+<path d="M0 0V36M24 0 2 20 24 36" transform="translate(138.2 91) scale(2.04)" fill="none" stroke="#0038ff" stroke-width="8.5" stroke-linecap="square" stroke-linejoin="round"/>
+<path d="M92 188h72" stroke="#101010" stroke-width="7" stroke-linecap="round"/>
+<circle cx="82" cy="188" r="4" fill="#ff77cd"/><circle cx="174" cy="188" r="4" fill="#ff77cd"/>
+</svg>

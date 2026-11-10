@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="none" role="img" aria-labelledby="curiosity-spark-title curiosity-spark-desc">
+  <title id="curiosity-spark-title">A spark of curiosity</title>
+  <desc id="curiosity-spark-desc">A bold, uneven yellow starburst with a blue central spark and an orange satellite.</desc>
+  <path d="m128 10 17 62 44-34-17 53 63-2-53 39 57 26-68 7 15 61-43-42-20 64-18-67-53 44 23-61-65-10 59-27-55-39 66 6-11-57 42 36Z" fill="#ffe78c" stroke="#101010" stroke-width="8" stroke-linejoin="round"/>
+<path d="m127 78 12 38 38 12-38 12-12 38-12-38-38-12 38-12Z" fill="#0038ff" stroke="#101010" stroke-width="6" stroke-linejoin="round"/>
+<circle cx="221" cy="34" r="14" fill="#ff5f04" stroke="#101010" stroke-width="6"/>
+</svg>

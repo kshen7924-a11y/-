@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 220" fill="none" role="img" aria-labelledby="idea-eye-title idea-eye-desc">
+  <title id="idea-eye-title">See an idea</title>
+  <desc id="idea-eye-desc">An abstract pink eye with a blue iris, yellow glint and three expressive lashes.</desc>
+  <path d="M18 116C65 24 248 24 302 116c-54 92-237 92-284 0Z" fill="#fff9ed" stroke="#101010" stroke-width="8" stroke-linejoin="round"/>
+<path d="M35 116C83 52 234 52 285 116c-51 63-202 63-250 0Z" fill="#ff77cd" stroke="#101010" stroke-width="6" stroke-linejoin="round"/>
+<circle cx="160" cy="116" r="48" fill="#0038ff" stroke="#101010" stroke-width="7"/>
+<circle cx="160" cy="116" r="25" fill="#101010"/>
+<path d="m171 79 5 14 14 5-14 5-5 14-5-14-14-5 14-5Z" fill="#ffe78c"/>
+<path d="m94 48-11-17m77 4V13m65 35 12-18" stroke="#101010" stroke-width="8" stroke-linecap="round"/>
+<path d="M122 194q38 15 76 0" stroke="#101010" stroke-width="6" stroke-linecap="round"/>
+</svg>

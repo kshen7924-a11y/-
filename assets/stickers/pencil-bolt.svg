@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 300" fill="none" role="img" aria-labelledby="pencil-bolt-title pencil-bolt-desc">
+  <title id="pencil-bolt-title">Draw the next thing</title>
+  <desc id="pencil-bolt-desc">A tilted yellow pencil over an orange lightning bolt; an original mark for making and experimentation.</desc>
+  <path d="m66 39 118-20-43 94 62-13L73 278l28-110-62 14Z" fill="#ff5f04" stroke="#101010" stroke-width="8" stroke-linejoin="round"/>
+<g transform="rotate(25 128 145)" stroke="#101010" stroke-width="7" stroke-linejoin="round">
+  <path d="M104 66h48v135h-48Z" fill="#ffe78c"/>
+  <path d="M104 201h48l-24 50Z" fill="#fff9ed"/>
+  <path d="m118 230 10 21 10-21" fill="#101010"/>
+  <path d="M104 40q0-10 10-10h28q10 0 10 10v27h-48Z" fill="#0038ff"/>
+  <path d="M104 67h48v15h-48Z" fill="#fff9ed"/>
+  <path d="M120 89v103m16-103v103" stroke-width="4"/>
+</g>
+</svg>
