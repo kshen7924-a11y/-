@@ -1,0 +1,96 @@
+/* Shared cover geometry and the three project carousels. */
+.category-grid .picture{aspect-ratio:3/4}
+.brand-rail .picture{aspect-ratio:4/3}
+.caption{grid-template-columns:24px minmax(0,1fr)}
+.brand-rail.light-rail .caption{border-color:#bbb;color:#111}
+.brand-rail.light-rail .caption small,.brand-rail.light-rail .caption .micro{color:#666}
+.light-rail+.rail-footer>.micro{color:#666}
+.light-rail+.rail-footer .rail-progress{background:#ccc}
+.light-rail+.rail-footer .rail-progress>i{background:#111}
+.brand-rail.light-rail .placeholder-art,#campaign-grid .placeholder-art{background:#e8e8e3;border-color:#ccc}
+.brand-rail.light-rail .placeholder-art:before{border-color:#cecec7}
+.brand-rail.light-rail .placeholder-number{color:#c3c3bc}
+.brand-rail.light-rail .placeholder-label{color:#666}
+.placeholder-label{top:32px;bottom:auto}
+.placeholder-view{position:absolute;right:20px;bottom:20px}
+.brand-rail .caption strong{line-height:1.4}
+
+/* Matte black glass, luminous white lettering and an occasional quiet sweep. */
+.glass-control.glass-control,.picture .view-label,.placeholder-view,.artwork-zoom>span{position:relative;isolation:isolate;overflow:hidden;background:linear-gradient(135deg,#424242b8,#090909de);color:#fff;border:1px solid #ffffff45;border-radius:999px;backdrop-filter:blur(18px) saturate(.7);-webkit-backdrop-filter:blur(18px) saturate(.7);box-shadow:inset 0 1px 0 #ffffff2e,0 5px 18px #0003;text-shadow:0 0 5px #ffffff80,0 0 14px #ffffff38;transition:box-shadow .25s,border-color .25s,transform .25s}
+.glass-control.glass-control{padding:12px 20px;min-height:44px;display:inline-flex;align-items:center;justify-content:center;gap:12px;border-bottom:1px solid #ffffff45}
+.glass-control.glass-control:hover:not(:disabled),.work-card:hover .view-label,.work-card:hover .placeholder-view{background:linear-gradient(135deg,#505050cf,#141414ef);color:#fff;border-color:#ffffff96;box-shadow:inset 0 1px 0 #ffffff4a,0 5px 22px #0004,0 0 15px #ffffff22}
+.glass-control:after,.picture .view-label:after,.placeholder-view:after{content:'';position:absolute;inset:-50% auto -50% -70%;width:40%;background:linear-gradient(90deg,transparent,#ffffff26,transparent);transform:skewX(-24deg);animation:glass-sweep 8s ease-in-out infinite;pointer-events:none;z-index:-1}
+@keyframes glass-sweep{0%,60%{left:-70%;opacity:0}65%{opacity:1}85%,100%{left:150%;opacity:0}}
+.glass-control.glass-control:disabled{opacity:.3;box-shadow:none;text-shadow:none}
+.glass-control:disabled:after{animation:none}
+.site-header nav{gap:12px}
+.site-header nav .glass-control{padding:10px 18px;border:1px solid #ffffff45;min-height:44px}
+.site-header nav .cursor-toggle{gap:8px}
+.contact-cta.glass-control{padding:26px 42px;min-height:110px;justify-content:center;box-shadow:inset 0 1px 0 #ffffff5e,0 0 28px #ffffff15;border-color:#ffffff70}
+.contact-cta.glass-control small{color:#ddd}
+.text-link.glass-control{font-size:12px;min-height:48px;padding:12px 24px}
+.close-dialog.glass-control,.lightbox-close.glass-control{font-size:12px;padding:8px 18px}
+.rail-controls .glass-control{width:50px;height:50px;padding:0;font-size:20px}
+.contact-actions{gap:12px}
+.contact-actions .glass-control{font-size:11px;padding:10px 16px}
+.picture .view-label,.placeholder-view,.artwork-zoom>span{position:absolute;padding:11px 17px;min-height:38px;display:inline-flex;align-items:center;justify-content:center;opacity:1;transform:none;font-size:11px;line-height:1.4;white-space:nowrap}
+.picture .view-label{right:16px;bottom:16px}
+.work-card:focus-visible,.artwork-zoom:focus-visible{outline:2px solid #ff5b1a;outline-offset:5px}
+
+/* Enlarge the hero while keeping the complete character below the header. */
+.hero-stage{height:clamp(640px,60vw,900px)}
+.hero-character{width:clamp(480px,58vw,840px);bottom:-55px}
+
+/* Native-size artwork is scrollable; fitting is a separate user choice. */
+.lightbox-stage{display:block;padding:20px;overflow:auto;overscroll-behavior:contain;scrollbar-width:thin;scrollbar-color:#777 #222}
+.lightbox-canvas{display:grid;place-items:center;width:max-content;min-width:100%;height:max-content;min-height:100%}
+.lightbox-canvas>img{width:auto;height:auto;max-width:none;max-height:none;object-fit:contain}
+.fit-view .lightbox-stage{display:grid;grid-template-columns:minmax(0,1fr);grid-template-rows:minmax(0,1fr);overflow:hidden}
+.fit-view .lightbox-canvas{width:100%;height:100%;min-width:0;min-height:0;overflow:hidden}
+.fit-view .lightbox-canvas>img{width:100%;height:100%;min-width:0;min-height:0;max-width:100%;max-height:100%;object-fit:contain}
+.image-lightbox>header>div:first-child{min-width:0;font-size:12px;line-height:1.5}
+.lightbox-size{display:block;color:#aaa;font:10px/1.6 monospace;margin-top:6px}
+.lightbox-tools{display:flex;align-items:center;gap:12px;flex-shrink:0}
+.lightbox-tools .glass-control{font-size:12px;white-space:nowrap}
+.image-lightbox>footer .glass-control{width:44px;height:44px;padding:0}
+
+@media(min-width:601px) and (max-width:1000px){.hero-stage{height:650px}.hero-character{width:580px;left:56%;bottom:-20px}.hero-copy{top:16%}.spectrum{width:90px;top:6%}}
+@media(max-width:600px){
+ .site-header nav{gap:6px}.site-header nav .glass-control{min-height:40px;padding:8px 12px;font-size:11px}.site-header nav .cursor-toggle{display:none}
+ .hero-stage{height:600px}.hero-character{width:420px;max-width:calc(100vw - 24px);left:50%;bottom:6px}.hero-copy{top:12px}.hero-title{margin-top:-30px}
+ .picture .view-label,.placeholder-view{display:inline-flex;right:10px;bottom:10px;font-size:10px;padding:8px 12px;min-height:34px}
+ .artwork-zoom>span{display:inline-flex;font-size:9px;padding:7px 10px;min-height:30px;right:8px;bottom:8px}
+ .placeholder-label{top:26px;left:26px}.category-grid .caption strong{font-size:22px}
+ .rail-controls .glass-control{width:44px;height:44px}.contact-cta.glass-control{min-height:96px;width:100%;padding:20px 28px}
+ .lightbox-stage{padding:12px}.image-lightbox>header{padding:12px 16px;flex-wrap:wrap;gap:12px}.lightbox-tools{gap:8px;margin-left:auto}.lightbox-tools .glass-control{min-height:40px;padding:8px 14px;font-size:11px}
+}
+@media(max-width:380px){.site-header nav .glass-control{padding:8px 9px;font-size:10px}.wordmark{font-size:20px}.hero-stage{height:545px}.hero-character{max-width:calc(100vw - 24px)}.hero-copy p{font-size:15px}.picture .view-label{font-size:9px;padding:7px 10px}.caption{gap:7px;grid-template-columns:18px minmax(0,1fr)}}
+@media(prefers-reduced-motion:reduce){.glass-control:after,.picture .view-label:after,.placeholder-view:after{animation:none}.glass-control.glass-control{transition:none}}
+
+/* Quiet secondary controls; artwork itself remains the click target. */
+.picture .view-label,.placeholder-view,.artwork-zoom>span{display:none!important}
+.site-header nav .glass-control{min-height:34px;padding:7px 13px;font-size:12px}
+.site-header nav .cursor-toggle{min-height:28px;padding:6px 10px;font-size:9px}
+.text-link.glass-control{min-height:32px;padding:8px 14px;font-size:11px}
+.rail-controls .glass-control{width:36px;height:36px;font-size:17px}
+.rail-controls{gap:8px}
+.project-dialog .glass-control.glass-control,.image-lightbox .glass-control.glass-control{background:#000;color:#fff;border:1px solid #333;box-shadow:none;text-shadow:none;backdrop-filter:none;-webkit-backdrop-filter:none;animation:none;transition:none;transform:none}
+.project-dialog .glass-control.glass-control:hover,.image-lightbox .glass-control.glass-control:hover{background:#000;color:#fff;box-shadow:none;border-color:#333;transform:none}
+.project-dialog .glass-control:after,.image-lightbox .glass-control:after{content:none;animation:none}
+.project-dialog .icon-control.glass-control,.image-lightbox .icon-control.glass-control{width:34px;height:34px;min-width:34px;min-height:34px;padding:0;gap:0;border-radius:50%;flex-shrink:0}
+.icon-control svg{display:block;flex-shrink:0}
+.image-lightbox>footer .glass-control{width:34px;height:34px;min-height:34px;font-size:17px}
+.lightbox-tools{gap:8px}
+.dialog-toolbar{padding-block:16px}
+.dialog-footer{padding-block:16px;justify-content:space-between}
+.contact-actions{gap:8px;margin-top:12px}
+.contact-cta.glass-control.glass-control,.contact-cta.glass-control.glass-control:hover{background:#fff;color:#000;border:1px solid #fff;box-shadow:none;text-shadow:none;backdrop-filter:none;-webkit-backdrop-filter:none;animation:none;transition:none;min-height:96px;padding:24px 40px}
+.contact-cta.glass-control small{color:#555;text-shadow:none}
+.contact-cta.glass-control:after{content:none;animation:none}
+@media(max-width:600px){
+ .site-header nav .glass-control{min-height:36px;padding:7px 10px;font-size:11px}
+ .project-dialog .icon-control.glass-control,.image-lightbox .icon-control.glass-control,.image-lightbox>footer .glass-control{width:40px;height:40px;min-width:40px;min-height:40px}
+ .rail-controls .glass-control{width:40px;height:40px;min-height:40px}
+ .dialog-toolbar{padding-block:12px}.contact-cta.glass-control.glass-control{min-height:88px;padding:20px 28px}
+}
+@media(max-width:380px){.site-header nav .glass-control{font-size:10px;padding:7px 8px}}
