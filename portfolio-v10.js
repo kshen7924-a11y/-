@@ -20,6 +20,15 @@ function syncMotionToggle(){const off=localStorage.getItem('sk-motion')==='off';
 function cleanupPage(){motion?.destroy();motion=null;routeCleanup.forEach(fn=>fn());routeCleanup=[];document.querySelectorAll('main video').forEach(video=>video.pause());}
 function initPage(){const main=document.querySelector('main');syncMotionToggle();const grid=main.querySelector('[data-work-grid]');if(grid){const query=new URL(location.href).searchParams;let filter=query.get('filter')||grid.dataset.initialFilter;const allowed=['all','brand','poster','campaign','ip','experience'];if(!allowed.includes(filter))filter=grid.dataset.initialFilter;let category=query.get('category')||'all';if(category==='three-d')category='3d';if(!['all','illustration','3d','creative','operations'].includes(category))category='all';applyFilter(filter,category);}
   motion=initMotion(main);
+  const footprint=main.querySelector('[data-footprint-playground]');
+  if(footprint){
+    import('./footprint-playground.js').then(({initFootprintPlayground})=>{
+      if(footprint.isConnected){
+        const cleanup=initFootprintPlayground(footprint);
+        if(cleanup)routeCleanup.push(cleanup);
+      }
+    });
+  }
   for(const image of main.querySelectorAll('img')){if(!image.complete)on(image,'load',()=>motion?.refresh(),{once:true});}
   const caseSteps=main.querySelectorAll('[data-case-step]');if(caseSteps.length){const activate=index=>main.querySelectorAll('[data-case-slide]').forEach(slide=>{const active=Number(slide.dataset.caseSlide)===index;slide.classList.toggle('active',active);slide.setAttribute('aria-hidden',String(!active));slide.tabIndex=active?0:-1;});activate(0);if(innerWidth>767){const update=()=>{const center=innerHeight*.48;let target=0,distance=Infinity;caseSteps.forEach(el=>{const r=el.getBoundingClientRect();const d=Math.abs((r.top+r.bottom)/2-center);if(d<distance){distance=d;target=Number(el.dataset.caseStep);}});activate(target);};on(window,'scroll',update,{passive:true});update();}}
   const darks=[...main.querySelectorAll('[data-theme="dark"]')];let pendingFrame=false;const updateTheme=()=>{pendingFrame=false;document.querySelector('.site-header')?.classList.toggle('on-dark',darks.some(el=>{const r=el.getBoundingClientRect();return r.top<=45&&r.bottom>45;}));};on(window,'scroll',()=>{if(!pendingFrame){pendingFrame=true;requestAnimationFrame(updateTheme);}},{passive:true});on(window,'resize',updateTheme,{passive:true});updateTheme();

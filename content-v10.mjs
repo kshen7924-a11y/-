@@ -2,6 +2,14 @@
 // Existing local video files are retained as separate motion studies.
 // Project colors are editable interface accents, not claims about delivered brand guidelines.
 
+import {wildCase} from './wild-case-content.mjs';
+import {treasureOfficerCase} from './treasure-officer-content.mjs';
+import {coinHuntCase} from './coin-hunt-content.mjs';
+import {filledProjectSlots,projectAdditions} from './project-additions.mjs';
+import {projectCovers} from './project-covers.mjs';
+
+export {filledProjectSlots};
+
 export const profile = {
   name: '申凯',
   english: 'KAI SHEN',
@@ -19,7 +27,7 @@ export const profile = {
   process: ['理解背景', '形成方向', '视觉探索', '场景落地']
 };
 
-export const projects = [
+const baseProjects = [
   {
     id: 'lord',
     title: 'LORD',
@@ -95,9 +103,40 @@ export const projects = [
     note: '当前展示为 IP 规范选页；项目背景、个人分工与应用成果仍待补充。'
   },
   {
+    id: 'footprint-stickers',
+    title: '足迹冰箱贴纸活动',
+    subtitle: '从打卡收集、自由拼贴到社媒分享',
+    category: 'campaign',
+    label: 'CAMPAIGN / FOOTPRINTS',
+    cover: '/assets/footprint-stickers/hero-original.webp',
+    color: '#b4a0eb'
+  },
+  {
+    id: 'jagat-recap',
+    title: 'JAGAT 年度报告',
+    subtitle: '2024–2025 · 年度运营活动与社媒传播',
+    category: 'campaign',
+    label: 'CAMPAIGN / JAGAT',
+    cover: '/assets/jagat-recap/cover.webp',
+    alternate: '/assets/jagat-recap/alternate.webp',
+    color: '#201332'
+  },
+  {
+    id: 'miaole',
+    title: '喵叻沐浴露',
+    subtitle: '把猫咪靠近的瞬间画成一个品牌',
+    category: 'brand',
+    label: 'BRAND IDENTITY',
+    cover: '/assets/miaole-case/social-01.webp',
+    alternate: '/assets/miaole-case/product-original.webp',
+    color: '#FEFDF9',
+    description: '喵叻是一款添加猫薄荷成分的人用沐浴露。我把「洗完澡，猫咪也许会凑近闻一闻」画成一段日常小故事，再将同一套视觉语言延展到瓶标、电商和宣传画面。',
+    tags: ['标志设计', '整体 VI 方向', '包装设计', '电商与宣传视觉']
+  },
+  {
     id: 'treasure',
     title: '全球寻宝活动',
-    subtitle: 'JAGAT 活动主视觉与传播延展',
+    subtitle: 'COIN HUNT GO! · 城市运营、代币设计与品牌联名',
     category: 'campaign',
     label: 'CAMPAIGN / JAGAT',
     cover: '/assets/poster-16.webp',
@@ -117,6 +156,7 @@ export const projects = [
       {title: '动效选录', text: '现有卷轴寻宝动效作为活动视觉素材的一部分展示。'}
     ],
     video: '/assets/video-treasure.mp4',
+    coinHuntCase,
     note: '完整项目过程、分工和成果数据将在素材整理后补充。'
   },
   {
@@ -143,27 +183,36 @@ export const projects = [
   {
     id: 'wild',
     title: 'WILD IMPACT',
-    subtitle: '一个野人，一把巨斧',
+    subtitle: '小野 · 角色规范与 IP 延展',
     category: 'ip',
     label: 'PERSONAL IP',
-    cover: '/assets/wild-hero.png',
+    cover: '/assets/wild-master-cutout-v1.png',
     alternate: '/assets/wild-seated.png',
-    color: '#D4FF00',
-    description: '一个野人，一把巨斧。以原始的直觉与克制的细节，表达设计带来的视觉冲击。当前展示使用既有静态角色图。',
-    tags: ['个人 IP', '角色表达', '静态角色展示'],
-    images: [
-      {src: '/assets/wild-hero.png', alt: 'WILD IMPACT · 既有野人角色与完整钛金属巨斧'},
-      {src: '/assets/wild-seated.png', alt: 'WILD IMPACT · 既有坐姿回望角色，毛发与服装细节'}
-    ],
-    sections: [
-      {title: '形态 / FORM', text: '圆润的体态、独特的毛发轮廓与夸张比例的巨斧。'},
-      {title: '材质 / TEXTURE', text: '柔软毛发、哑光服装与钛金属的冷暖对比。'},
-      {title: '色彩 / COLOR', text: '黑白基调，蓝绿异瞳与红色丝带作为记忆点。'},
-      {title: '角色展示', text: '以既有静态角色图呈现形态、材质与色彩，保留角色和巨斧的完整轮廓。'}
-    ],
-    note: '当前为既有静态角色图展示；保持完整比例，不裁斧尖、长柄或双脚。'
+    color: '#2d2926',
+    description: '小野的弯月斧和尖毛束构成远距离识别，异瞳、绒毛与红结保留亲近感。案例展示角色标准及跨场景、贴纸、潮玩和传播物料的应用。',
+    tags: ['个人 IP', '角色规范', '潮玩与传播'],
+    wildCase
+  },
+  {
+    id: 'treasure-officer',
+    title: '寻宝官',
+    subtitle: 'JAGAT 寻宝角色 · 形象规范与应用',
+    category: 'ip',
+    label: 'CHARACTER IP / JAGAT',
+    cover: '/assets/treasure-officer-case/cover-portrait.webp',
+    previewCover: '/assets/treasure-officer-case/cover-portrait.webp',
+    color: '#dbe8fb',
+    description: '用帽徽、红发与金币建立寻宝官的视觉识别，以动作、场景、贴纸、潮玩和物料延续角色在寻宝活动中的表达。',
+    tags: ['角色 IP', '形象规范', '活动延展'],
+    treasureOfficerCase
   }
 ];
+
+const additionsById = new Map(projectAdditions.map(project => [project.id, project]));
+export const projects = [
+  ...baseProjects.map(project => ({...project, ...additionsById.get(project.id)})),
+  ...projectAdditions.filter(project => !baseProjects.some(base => base.id === project.id))
+].map(project => ({...project, ...projectCovers[project.id]}));
 
 const posterEntries = [
   ['poster-01', 'JAGAT', '字体与版式', 'creative'],
@@ -204,8 +253,7 @@ export const posterCategories = [
   {id: 'operations', name: '运营', english: 'CAMPAIGN VISUALS', cover: '/assets/poster-16.webp'}
 ];
 
-// Original rail capacities remain: brand 3 + 7 = 10; campaign 2 + 3 = 5;
-// experience 0 + 5 = 5. Pending records never represent completed projects.
+// Pending records preserve the existing archive slots for future projects.
 export const pendingProjects = [
   ...Array.from({length: 7}, (_, index) => ({
     id: `brand-${index + 4}`,
@@ -225,7 +273,7 @@ export const pendingProjects = [
     category: 'experience',
     fields: ['项目背景与目标', '个人职责与分工', '设计过程与方案', '落地成果与复盘']
   }))
-];
+].filter(project => !filledProjectSlots[project.id]);
 
 export const motionStudies = [
   {

@@ -1,0 +1,425 @@
+.recap {
+  --recap-ink: #fff9f5;
+  --recap-gutter: clamp(20px, 5vw, 80px);
+  background: #100d19;
+  color: var(--recap-ink);
+  font-family: Inter, "Microsoft YaHei", "PingFang SC", sans-serif;
+}
+
+.recap-wrap {
+  width: min(100%, 1536px);
+  margin-inline: auto;
+  padding-inline: var(--recap-gutter);
+}
+
+.recap-intro {
+  padding-block: clamp(115px, 12vw, 170px) clamp(58px, 8vw, 110px);
+  background: radial-gradient(ellipse at 9% 25%, #271849, transparent 65%),
+    radial-gradient(ellipse at 96% 65%, #442019, transparent 62%), #110d19;
+}
+
+.recap-intro-heading {
+  display: grid;
+  grid-template-columns: 1.8fr 1fr;
+  align-items: end;
+  gap: 34px;
+  margin-bottom: clamp(32px, 4.5vw, 64px);
+}
+
+.recap-kicker {
+  margin: 0 0 12px;
+  color: var(--recap-accent, #d6c0fc);
+  font: 700 12px/1.5 "Roboto Condensed", "Microsoft YaHei", sans-serif;
+  letter-spacing: .13em;
+}
+
+.recap-intro h1 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: .17em;
+  margin: 0;
+  font: 840 clamp(50px, 8.2vw, 126px)/.96 "Roboto Condensed", "Microsoft YaHei", sans-serif;
+  letter-spacing: -.05em;
+}
+
+.recap-intro h1 span {
+  font: 750 .62em/1.16 "Microsoft YaHei", "PingFang SC", sans-serif;
+  letter-spacing: -.08em;
+  white-space: nowrap;
+}
+
+.recap-intro-heading > p,
+.recap-chapter-heading > div > p:last-child,
+.recap-section-heading > p {
+  max-width: 34em;
+  margin: 0;
+  font-size: clamp(14px, 1.35vw, 18px);
+  line-height: 1.85;
+  color: var(--recap-muted, #dbcfdc);
+}
+
+.recap-years {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(10px, 1.6vw, 24px);
+}
+
+.recap-2024 {
+  --recap-accent: #d7beff;
+  --recap-muted: #ded3eb;
+  --recap-rule: #d6b5ff40;
+  --recap-frame: #211634;
+  --recap-key-ratio: 16 / 9;
+}
+
+.recap-2025 {
+  --recap-accent: #ffc389;
+  --recap-muted: #eed7cc;
+  --recap-rule: #ffbe8b42;
+  --recap-frame: #331b1c;
+}
+
+.recap-year-link {
+  display: block;
+  overflow: hidden;
+  min-width: 0;
+  border: 1px solid var(--recap-rule);
+  background: var(--recap-frame);
+}
+
+.recap-year-link:hover {
+  border-color: var(--recap-accent);
+}
+
+.recap-year-link img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.recap-year-link > div {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: clamp(12px, 1.9vw, 24px);
+}
+
+.recap-year-link span {
+  color: var(--recap-accent);
+  font: 720 clamp(17px, 2vw, 28px)/1 "Roboto Condensed", sans-serif;
+}
+
+.recap-year-link strong {
+  font-size: clamp(12px, 1.45vw, 21px);
+  line-height: 1.45;
+}
+
+.recap-year-link i {
+  margin-left: auto;
+  font: 400 22px/1 sans-serif;
+  color: var(--recap-accent);
+}
+
+.recap-overview {
+  background: #17121f;
+  padding-block: clamp(48px, 7vw, 90px);
+}
+
+.recap-overview .recap-wrap {
+  display: grid;
+  grid-template-columns: minmax(200px, 1fr) 2.6fr;
+  align-items: start;
+  gap: 30px;
+}
+
+.recap-overview h2 {
+  margin: 0;
+  font-size: clamp(28px, 3.6vw, 52px);
+  letter-spacing: -.07em;
+  line-height: 1.18;
+}
+
+.recap-overview dl {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(14px, 3vw, 44px);
+  margin: 0;
+}
+
+.recap-overview dl div {
+  border-top: 1px solid #bfa8dc70;
+  padding-top: 16px;
+}
+
+.recap-overview dt {
+  color: #ecdafa;
+  font-size: 17px;
+  font-weight: 750;
+}
+
+.recap-overview dd {
+  margin: 9px 0 0;
+  font-size: 14px;
+  color: #d7ccdd;
+  line-height: 1.75;
+}
+
+.recap-chapter {
+  border-top: 1px solid var(--recap-rule);
+  padding-block: clamp(54px, 8vw, 116px);
+}
+
+.recap-chapter.recap-2024 {
+  background: radial-gradient(ellipse at 20% 0%, #332252, transparent 25%), #130f20;
+}
+
+.recap-chapter.recap-2025 {
+  background: radial-gradient(ellipse at 78% 0%, #50281b, transparent 22%), #1c1116;
+}
+
+.recap-chapter-heading {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: center;
+  column-gap: clamp(20px, 4.8vw, 72px);
+  margin-bottom: clamp(28px, 5vw, 68px);
+}
+
+.recap-year {
+  color: var(--recap-accent);
+  font: 790 clamp(74px, 14vw, 200px)/.85 "Roboto Condensed", sans-serif;
+  letter-spacing: -.075em;
+}
+
+.recap-chapter-heading h2,
+.recap-section-heading h3 {
+  margin: 0;
+  font-weight: 750;
+  letter-spacing: -.06em;
+  line-height: 1.19;
+}
+
+.recap-chapter-heading h2 {
+  font-size: clamp(28px, 4.5vw, 65px);
+  margin-bottom: 12px;
+}
+
+.recap figure {
+  min-width: 0;
+  margin: 0;
+}
+
+.recap-art {
+  position: relative;
+  width: 100%;
+  display: block;
+  padding: 0;
+  overflow: hidden;
+  background: var(--recap-frame);
+  cursor: zoom-in;
+}
+
+.recap a:focus-visible,
+.recap-art:focus-visible {
+  outline: 2px solid var(--recap-accent, #e3c8ff);
+  outline-offset: 4px;
+}
+
+.recap-art img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.recap-key-art .recap-art img {
+  aspect-ratio: var(--recap-key-ratio, 8 / 5);
+  object-fit: contain;
+}
+
+.recap figcaption {
+  padding-top: 10px;
+  color: var(--recap-muted);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.recap-key-art figcaption {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 14px;
+}
+
+.recap-key-art figcaption span {
+  color: var(--recap-accent);
+  font-weight: 700;
+}
+
+.recap-section {
+  margin-top: clamp(56px, 9vw, 124px);
+  padding-top: clamp(25px, 4vw, 54px);
+  border-top: 1px solid var(--recap-rule);
+}
+
+.recap-section-heading {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: end;
+  gap: 16px 36px;
+  margin-bottom: clamp(24px, 4vw, 56px);
+}
+
+.recap-section-heading h3 {
+  font-size: clamp(24px, 3.4vw, 49px);
+}
+
+.recap-report-groups {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(24px, 3vw, 44px);
+}
+
+.recap-2024 .recap-report-group,
+.recap-report-personal {
+  grid-column: 1 / -1;
+}
+
+.recap-report-group h4 {
+  margin: 0 0 14px;
+  font-size: 15px;
+  color: var(--recap-accent);
+}
+
+.recap-figures {
+  display: grid;
+  gap: clamp(18px, 2.5vw, 38px) clamp(10px, 2vw, 28px);
+}
+
+.recap-screens {
+  grid-template-columns: repeat(var(--columns), minmax(0, 1fr));
+}
+
+.recap-screens figure {
+  width: min(100%, 245px);
+  justify-self: center;
+}
+
+.recap-screens img {
+  aspect-ratio: 9 / 19.5;
+  object-fit: contain;
+}
+
+.recap-cards {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.recap-cards img {
+  aspect-ratio: 3 / 4;
+  object-fit: contain;
+}
+
+.recap-social {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.recap-2025 .recap-social {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.recap-social img {
+  aspect-ratio: 4 / 5;
+  object-fit: contain;
+}
+
+.recap-social-copy {
+  margin-top: clamp(30px, 5vw, 62px);
+  padding: clamp(16px, 3vw, 38px);
+  border-left: 2px solid var(--recap-accent);
+  background: var(--recap-frame);
+}
+
+.recap-social-copy blockquote {
+  margin: 0;
+  max-width: 55em;
+  font-size: clamp(15px, 1.8vw, 22px);
+  line-height: 1.75;
+}
+
+.recap-source-note {
+  margin: 18px 0 0;
+  font-size: 12px;
+  color: var(--recap-muted);
+}
+
+.recap-bottom {
+  background: #140f1a;
+  border-top: 1px solid #bc9fdb48;
+}
+
+.recap-bottom .recap-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 24px;
+  padding-block: 30px;
+}
+
+.recap-bottom a {
+  text-decoration: underline;
+  text-underline-offset: .3em;
+}
+
+.recap-bottom a:first-child {
+  margin-right: auto;
+}
+
+@media (max-width: 800px) {
+  .recap-intro-heading,
+  .recap-overview .recap-wrap {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .recap-overview h2 br {
+    display: none;
+  }
+}
+
+@media (max-width: 560px) {
+  .recap-intro h1 {
+    font-size: clamp(49px, 13.8vw, 76px);
+  }
+
+  .recap-year-link > div {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 4px;
+  }
+
+  .recap-year-link strong {
+    grid-area: 2 / 1 / 3 / 3;
+  }
+
+  .recap-year-link i {
+    grid-area: 1 / 2;
+    font-size: 17px;
+  }
+
+  .recap-overview dl,
+  .recap-chapter-heading,
+  .recap-section-heading {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .recap-report-groups {
+    grid-template-columns: 1fr;
+  }
+
+  .recap-screens,
+  .recap-cards,
+  .recap-social,
+  .recap-2025 .recap-social {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
