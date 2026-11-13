@@ -5,6 +5,7 @@
 import {wildCase} from './wild-case-content.mjs';
 import {treasureOfficerCase} from './treasure-officer-content.mjs';
 import {coinHuntCase} from './coin-hunt-content.mjs';
+import {gemringCase} from './gemring-case-content.mjs';
 import {filledProjectSlots,projectAdditions} from './project-additions.mjs';
 import {projectCovers} from './project-covers.mjs';
 
@@ -58,14 +59,14 @@ const baseProjects = [
   {
     id: 'gemring',
     title: 'GEMRING',
-    subtitle: '标志、字体与品牌组合规则',
+    subtitle: '智能戒指 · 品牌、包装与电商视觉',
     category: 'brand',
-    label: 'VISUAL SYSTEM',
-    cover: '/assets/gem-logo-01.webp',
+    label: 'BRAND & E-COMMERCE',
+    cover: gemringCase.hero.src,
     alternate: '/assets/gem-guideline-03.webp',
-    color: '#D4FF00',
-    description: '从图形标志与字标出发，整理黑白应用、字体与组合规则，让品牌在不同介质中保持清晰的识别。',
-    tags: ['品牌识别', '标志组合', '字体规范'],
+    color: '#ded5c8',
+    description: '我为 GEMRING 智能戒指设计品牌标志与包装，并将视觉延展到亚马逊商品图、A+ 详情、广告和品牌独立站。',
+    tags: ['品牌识别', '包装设计', '电商视觉', '独立站'],
     images: [
       {src: '/assets/gem-logo-01.webp', alt: 'GEMRING · 完整标志组合'},
       {src: '/assets/gem-guideline-02.webp', alt: 'GEMRING · 标志组合与比例'},
@@ -78,7 +79,7 @@ const baseProjects = [
       {title: '识别系统', text: '从图形标志与字标出发，整理品牌的组合规则。'},
       {title: '应用与字体', text: '以黑白应用与中英文字体规范，保持不同介质中的识别一致性。'}
     ],
-    note: '当前选录为标志与规范材料。'
+    gemringCase
   },
   {
     id: 'jagat',

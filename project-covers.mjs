@@ -4,7 +4,7 @@ export const projectCovers = {
     "homeCover": "/assets/project-covers/lord-wide.webp"
   },
   "gemring": {
-    "previewCover": "/assets/project-covers/gemring-portrait.webp"
+    "previewCover": "/assets/gemring-case/cover-portrait.webp"
   },
   "jagat": {
     "previewCover": "/assets/project-covers/jagat-portrait.webp",
@@ -37,6 +37,6 @@ export const projectCovers = {
     "previewCover": "/assets/project-covers/lihe-portrait.webp"
   },
   "quwan-intmo": {
-    "previewCover": "/assets/project-covers/quwan-intmo-portrait.webp"
+    "previewCover": "/assets/quwan-case/cover-portrait.webp"
   }
 };

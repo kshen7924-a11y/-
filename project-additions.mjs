@@ -1,3 +1,6 @@
+import {fuJenCampus} from './fu-jen-campus-content.mjs';
+import {quwanIntmo} from './quwan-intmo-content.mjs';
+
 export const projectAdditions = [
   {
     "id": "lord",
@@ -754,92 +757,8 @@ export const projectAdditions = [
       }
     ]
   },
-  {
-    "id": "quwan-intmo",
-    "title": "趣玩云集商场",
-    "subtitle": "品牌识别、商场导视与宣传视觉",
-    "description": "趣玩云集以社区生活中心为定位。案例选取现有标志规范、导视规范与宣传主画面，展示品牌如何在标识、指引和活动传播中呈现。",
-    "category": "brand",
-    "label": "BRAND / WAYFINDING",
-    "color": "#EA4B20",
-    "tags": [
-      "品牌识别",
-      "商场导视",
-      "宣传视觉"
-    ],
-    "note": "展示原有设计选页与宣传主画面截选。项目时间、个人职责与落地成果待补充。",
-    "cover": "/assets/quwan-intmo-additions/cover.webp",
-    "containCover": true,
-    "sections": [],
-    "additionalSections": [
-      {
-        "title": "品牌识别",
-        "text": "相连的双圆图形与中英文名称组合成标志。标准制图和橙白、黑白版本说明标志如何适应不同背景。",
-        "images": [
-          {
-            "src": "/assets/quwan-intmo-additions/01-01.webp",
-            "alt": "趣玩云集 INTMO · 标志标准制图",
-            "width": 1440,
-            "height": 1019
-          },
-          {
-            "src": "/assets/quwan-intmo-additions/01-02.webp",
-            "alt": "趣玩云集 INTMO · 橙白标志组合",
-            "width": 1440,
-            "height": 1019
-          },
-          {
-            "src": "/assets/quwan-intmo-additions/01-03.webp",
-            "alt": "趣玩云集 INTMO · 黑白标志组合",
-            "width": 1440,
-            "height": 1019
-          }
-        ]
-      },
-      {
-        "title": "商场导视",
-        "text": "导视规范选页展示标识配色、方向箭头与公共设施图标的使用。",
-        "images": [
-          {
-            "src": "/assets/quwan-intmo-additions/02-01.webp",
-            "alt": "趣玩云集 · 导视标识色彩规范",
-            "width": 1019,
-            "height": 1440
-          },
-          {
-            "src": "/assets/quwan-intmo-additions/02-02.webp",
-            "alt": "趣玩云集 · 方向箭头与公共设施图标规范",
-            "width": 1019,
-            "height": 1440
-          }
-        ]
-      },
-      {
-        "title": "宣传视觉",
-        "text": "招商大屏以高饱和色与大字传递信息，品牌海报和节日海报用角色插画承接不同传播场景。",
-        "images": [
-          {
-            "src": "/assets/quwan-intmo-additions/03-01.webp",
-            "alt": "趣玩云集 · 招商大屏主画面截选",
-            "width": 1187,
-            "height": 832
-          },
-          {
-            "src": "/assets/quwan-intmo-additions/03-02.webp",
-            "alt": "趣玩云集 · 品牌宣传海报主画面截选",
-            "width": 1125,
-            "height": 2185
-          },
-          {
-            "src": "/assets/quwan-intmo-additions/03-03.webp",
-            "alt": "趣玩云集 · 圣诞海报主画面截选",
-            "width": 1125,
-            "height": 2250
-          }
-        ]
-      }
-    ]
-  }
+  quwanIntmo,
+  fuJenCampus
 ];
 
 export const filledProjectSlots = {
@@ -848,5 +767,6 @@ export const filledProjectSlots = {
   "brand-6": "lihe",
   "brand-7": "quwan-intmo",
   "campaign-3": "jagat-recap",
-  "campaign-4": "footprint-stickers"
+  "campaign-4": "footprint-stickers",
+  "campaign-5": "fu-jen-campus"
 };

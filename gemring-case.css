@@ -1,0 +1,160 @@
+.gemring-case {
+  --gem-paper: #f3ece2;
+  --gem-ink: #231e1a;
+  --gem-rule: #c3b5a6;
+  background: var(--gem-paper);
+  color: var(--gem-ink);
+}
+
+.gemring-wrap {
+  width: min(1440px, calc(100% - 2 * var(--gutter)));
+  margin-inline: auto;
+}
+
+.gemring-hero {
+  padding-top: clamp(105px, 9vw, 158px);
+}
+
+.gemring-page-title {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.gemring-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(0, .9fr);
+  gap: clamp(18px, 5vw, 88px);
+  align-items: start;
+  margin-block: clamp(20px, 3.6vw, 52px);
+}
+
+.gemring-intro > p,
+.gemring-section-copy > p,
+.gemring-role dd {
+  font-size: clamp(1rem, 1.45vw, 1.22rem);
+  line-height: 1.75;
+  margin: 0;
+}
+
+.gemring-role {
+  margin: 0;
+  border-left: 1px solid var(--gem-rule);
+  padding-left: clamp(14px, 2.7vw, 40px);
+}
+
+.gemring-role dt {
+  font-weight: 700;
+  margin-bottom: .22em;
+}
+
+.gemring-nav {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(0, 1fr);
+  margin-bottom: clamp(28px, 5vw, 76px);
+  border: 1px solid var(--gem-rule);
+}
+
+.gemring-nav a,
+.gemring-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: .5em;
+  font-weight: 700;
+  padding: .8em 1em;
+  text-decoration: none;
+}
+
+.gemring-nav a + a { border-left: 1px solid var(--gem-rule); }
+.gemring-nav a:hover,
+.gemring-link:hover { background: var(--gem-ink); color: var(--gem-paper); }
+.gemring-case :is(button, a):focus-visible { outline: 3px solid var(--blue); outline-offset: 3px; }
+
+.gemring-section {
+  padding-block: clamp(42px, 6.5vw, 100px);
+  scroll-margin-top: 92px;
+  border-top: 1px solid var(--gem-rule);
+}
+
+.gemring-section--identity { background: #e8ddcf; }
+.gemring-section--packaging { background: #2b2521; color: #f6eee4; }
+.gemring-section--amazon { background: #faf6ef; }
+.gemring-section--advertising { background: #231e1a; color: #f6eee4; }
+.gemring-section--storefront { background: #e9ddd0; }
+
+.gemring-section-copy {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, .8fr);
+  align-items: end;
+  gap: clamp(14px, 3.6vw, 55px);
+  margin-bottom: clamp(20px, 3.5vw, 48px);
+}
+
+.gemring-section h2 {
+  font-size: clamp(1.9rem, 4.1vw, 4.5rem);
+  font-weight: 800;
+  line-height: 1.12;
+  letter-spacing: -.04em;
+  text-wrap: balance;
+  margin: 0;
+}
+
+.gemring-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(16px, 2.15vw, 32px);
+  align-items: start;
+}
+
+.gemring-gallery[data-image-count="1"] { grid-template-columns: minmax(0, 1fr); }
+.gemring-gallery[data-image-count="2"] { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.gemring-lead:has(+ .gemring-gallery) { margin-bottom: clamp(20px, 3.4vw, 45px); }
+.gemring-section--packaging .gemring-lead { max-width: 820px; margin-inline: auto; }
+.gemring-group + .gemring-group { margin-top: clamp(22px, 4vw, 56px); }
+.gemring-group h3 { font-size: 1.15rem; margin: 0 0 .8em; }
+.gemring-gallery[data-image-count="4"] { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+.gemring-figure { margin: 0; min-width: 0; }
+.gemring-figure button { display: block; width: 100%; border: 0; padding: 0; background: transparent; cursor: zoom-in; }
+.gemring-figure img { display: block; width: 100%; height: auto; }
+.gemring-section--identity .gemring-gallery img { aspect-ratio: 16 / 9; object-fit: contain; background: #f3ece2; }
+.gemring-figure figcaption {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: .2em 1em;
+  padding-top: .6em;
+  font-size: .84rem;
+  line-height: 1.5;
+}
+.gemring-figure small { font-size: .85em; border: 1px solid currentColor; padding: .1em .45em; }
+
+.gemring-link {
+  width: fit-content;
+  border: 1px solid currentColor;
+  margin-top: 1.25em;
+}
+
+.gemring-end { padding-block: clamp(24px, 4vw, 55px); }
+.gemring-end .gemring-link { margin-top: 0; }
+
+@media (max-width: 820px) {
+  .gemring-intro, .gemring-section-copy { grid-template-columns: minmax(0, 1fr); }
+  .gemring-role { border-left: 0; border-top: 1px solid var(--gem-rule); padding: .8em 0 0; }
+  .gemring-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 570px) {
+  .gemring-nav { grid-auto-flow: row; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .gemring-nav a:nth-child(odd) { border-left: 0; }
+  .gemring-nav a:last-child:nth-child(odd) { grid-column: 1 / -1; }
+  .gemring-nav a:nth-child(n+3) { border-top: 1px solid var(--gem-rule); }
+  .gemring-gallery, .gemring-gallery[data-image-count="2"], .gemring-gallery[data-image-count="4"] { grid-template-columns: minmax(0, 1fr); }
+}
